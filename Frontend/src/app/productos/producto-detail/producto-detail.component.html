@@ -1,14 +1,14 @@
 <h2 class="mb-4">Detalles del Producto</h2>
 
-<!-- Botón para volver a la lista de productos -->
+
 <div class="d-flex justify-content-between align-items-center mb-3">
-  <a class="btn btn-secondary btn-sm" [routerLink]="['/productos']">
+  <a class="btn btn-secondary btn-sm" [routerLink]="['/home']">
     <fa-icon [icon]="faAngleLeft"></fa-icon>
     <span class="d-none d-md-inline"> Volver</span>
   </a>
 </div>
 
-<!-- Tabla de detalles del producto -->
+
 <div class="table-responsive" *ngIf="producto">
   <table class="table table-striped table-hover align-middle">
     <tbody>

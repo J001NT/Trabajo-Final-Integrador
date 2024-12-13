@@ -24,6 +24,10 @@ export class ProductoGrillaItemComponent {
     private authServise: AuthService,
     private router: Router
   ) {}
+  
+  mostrarDetalles(productoId: number) {
+    this.router.navigate(['/productos', productoId, 'detail']);
+  }
 
   agregarAlCarrito(producto: IProducto): void {
     if (this.authServise.isLoggedIn()) {

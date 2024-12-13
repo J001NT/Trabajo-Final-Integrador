@@ -1,5 +1,5 @@
 <div class="col">
-  <div class="card h-100">
+  <div class="card h-100" (click)="mostrarDetalles(producto.id)">
     <img [attr.src]="producto.imageUrl" class="card-img-top producto-img" alt="..."
       *ngIf="producto.imageUrl; else productoSinImagen">
     <ng-template #productoSinImagen>

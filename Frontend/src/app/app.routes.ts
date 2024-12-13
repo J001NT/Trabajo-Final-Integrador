@@ -19,16 +19,16 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
+    path: 'productos/:id/detail',
+    component: ProductoDetailComponent,
+  },
+  {
     path: 'productos',
     canActivate: [authGuard],
     children: [
       {
         path: '',
         component: ProductoListComponent,
-      },
-      {
-        path: ':id/detail',
-        component: ProductoDetailComponent,
       },
       {
         path: ':id/edit',
@@ -52,14 +52,6 @@ export const routes: Routes = [
         path: 'vista',
         component: CategoriasVistaComponent,
       },
-      /*{
-        path: ':id/edit',
-        component: ProductoUpdateComponent,
-      },
-      {
-        path: 'new',
-        component: ProductoUpdateComponent,
-      },*/
     ],
   },
   { path: 'carrito', component: CarritoComponent },
